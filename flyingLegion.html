@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flying Legion | Team 3635</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico"/>
+    <link rel="stylesheet" href="FLCSS/home.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<!--Loader and Main Headers -->
+<body onload="myFunction()" style="margin:0;">
+
+<div id="loader"></div>
+<div style="display:none;" id="myDiv" class="animate-bottom">
+
+<!--Nav Bar-->
+<div class="topnav">
+  <a class="active" href="./flyingLegion.html">Home</a>
+  <a href="./about.html">About</a>
+  <a href="./Schedule.html">Schedule</a>
+  <a href="./contact.html">Contact</a>
+</div>
+
+    <h1 id= "myHeader"> Team 3635: Flying Legion</h1>	
+    <body>
+        <div class="About-us">
+            <h2 id = "nash143">Houston County First Robotics Team </h1>
+              <p></p>
+    </body>
+  </body>
+</div>
+
+<!--loader script-->
+<script>
+var myVar;
+
+function myFunction() {
+  myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+
+</script>
+
+
+
+<!--Footer/BB-->
+<div id="footer">Menu<br>
+   
+    <a  style="font-size: 15px; color: white; text-decoration:none;" href="file:///Users/nivens/Downloads/Robotic/flyingLegion.html">Home</a><br>
+
+    <a style="font-size: 15px; color: white; text-decoration:none;" href="./about2.html">About Us</a><br>
+		
+   
+	<a style="font-size: 15px; color: white; text-decoration:none;" href="file:///Users/nivens/Downloads/Robotic/Schedule.html">Schedule</a><br>
+
+
+	<a style="font-size: 15px; color: white; text-decoration:none;" href="file:///Users/nivens/Downloads/Robotic/contact.html">Contact Us</a> <br>
+
+
+</div>
+
+
+
+
+
+
+
+<!--Slideshow-->
+<div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 5</div>
+      <img src="images/devon.jpeg" style="width:100%;height:585px">
+      <div class="text">G.R.I.T.S 2022</div>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 5</div>
+      <img src="images/Kickoff.jpeg" style="width:100%;height:585px">
+      <div class="text">Kickoff 2023</div>
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 5</div>
+      <img src="images/3635.jpeg" style="width:100%;height:585px">
+      <div class="text">FRC 2022</div>
+    </div>
+    
+    <div class="mySlides fade">
+        <div class="numbertext">4 / 5</div>
+        <img src="images/team2.jpeg" style="width:100%;height:585px">
+        <div class="text">Locked In 😤</div>
+      </div>
+    
+      <div class="mySlides fade">
+        <div class="numbertext">5 / 5</div>
+        <img class=image-responsive src="images/scream.jpeg" style="width:100%;height:585px">
+        <div class="text">Screaming</div>
+      </div>
+    
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span> 
+    </div>
+    
+    <script>
+    let slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 5000); // Change image every 5 seconds
+    }
+    </script>
+
+
+<h2>Our Sponsors</h2>
+    <img src="images/Sponsors/amuc.png" alt="Alpha Med" style="width: 50%;"> 
+    <img src="images/Sponsors/BAE.png" alt="BAE Systems" style="width: 50%;">
+    <img src="images/Sponsors/BAH.png" alt="Booze Allen Hamilton" style="width: 50%;">
+    <img src="images/Sponsors/cma.png" alt="Cornerstone Medical" style="width: 50%;">
+    <img src="images/Sponsors/dodStem.png" alt="Dep. Of Defense"style="width: 50%;">
+    <img src="images/Sponsors/Flint.png" alt="Flint Energies"style="width: 50%;">
+    <img src="images/Sponsors/frito.png" alt="Frito Lay"style="width: 50%;">
+    <img src="images/Sponsors/gp.png" alt="Georgia Power"style="width: 50%;">
+    <img src="images/Sponsors/HH.png" alt=""style="width: 50%;">
+    <img src="images/Sponsors/hlwh.png" alt=""style="width: 50%;">
+    <img src="images/Sponsors/jbh.png" alt=""style="width: 50%;">
+    <img src="images/Sponsors/me.png" alt=""style="width: 50%;">
+    <img src="images/Sponsors/MGO.png" alt=""style="width: 50%;">
+    <img src="images/Sponsors/sma.png" alt=""style="width: 50%;">
+
+
+
+
+
+
+<!--Scroll To Top-->
+<button onclick="topFunction()" id="myBtn" title="Go to top">&#8593</button>
+
+<script>
+// Get the button
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+</body>
+</html>
