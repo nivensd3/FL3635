@@ -150,6 +150,25 @@ html {
       font-size: 50px;
   }
   
+/* Main Links*/
+a:link {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+
   .column {
     float: left;
     width: 50%;
