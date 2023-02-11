@@ -63,6 +63,9 @@ body {
   input[type=submit]:hover {
     background-color: rgb(9,39,96);
   }
+  input:invalid {
+    border: 2px solid red;
+  }
   
   /* Style the container/contact section */
   .container {
