@@ -150,22 +150,18 @@ html {
       font-size: 50px;
   }
   
-  /* Main Links*/
-  a:link {
-    color: white;
-    background-color: transparent;
-    text-decoration: none;
+  .column {
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+    padding: 20px;
   }
   
-  a:hover {
-    color: red;
-    background-color: transparent;
-    text-decoration: underline;
-  }
-  a:active {
-    color: yellow;
-    background-color: transparent;
-    text-decoration: underline;
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
   }
   
   /*Slideshow*/
