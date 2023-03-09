@@ -4,7 +4,6 @@
     <title>Flying Legion | Team 3635</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.ico"/>
     <link rel="stylesheet" href="FLCSS/home.css">
-    <!--Commit-->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
@@ -17,7 +16,7 @@
 
 <!--Nav Bar-->
 <div class="topnav">
-  <a class="active" href="./index.html">Home</a>
+  <a class="active" href="./flyingLegion.html">Home</a>
   <a href="./about.html">About</a>
   <a href="./Schedule.html">Schedule</a>
   <a href="./contact.html">Contact</a>
@@ -52,15 +51,15 @@ function showPage() {
 <!--Footer/BB-->
 <div id="footer">Menu<br>
    
-    <a  style="font-size: 15px; color: white; text-decoration:none;" href="./index.html">Home</a><br>
+    <a  style="font-size: 15px; color: white; text-decoration:none;" href="file:///Users/nivens/Downloads/Robotic/flyingLegion.html">Home</a><br>
 
-    <a style="font-size: 15px; color: white; text-decoration:none;" href="./about.html">About Us</a><br>
+    <a style="font-size: 15px; color: white; text-decoration:none;" href="./about2.html">About Us</a><br>
 		
    
-	<a style="font-size: 15px; color: white; text-decoration:none;" href="./Schedule.html">Schedule</a><br>
+	<a style="font-size: 15px; color: white; text-decoration:none;" href="file:///Users/nivens/Downloads/Robotic/Schedule.html">Schedule</a><br>
 
 
-	<a style="font-size: 15px; color: white; text-decoration:none;" href="./contact.html">Contact Us</a> <br>
+	<a style="font-size: 15px; color: white; text-decoration:none;" href="file:///Users/nivens/Downloads/Robotic/contact.html">Contact Us</a> <br>
 
 
 </div>
@@ -108,16 +107,26 @@ function showPage() {
     <br>
     
     <div style="text-align:center">
-      <span class="dot"></span> 
-      <span class="dot"></span> 
-      <span class="dot"></span>
-      <span class="dot"></span>
-      <span class="dot"></span> 
-    </div>
+      <span class="dot" onclick="currentSlide(0)"></span> 
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+      <span class="dot" onclick="currentSlide(4)"></span>  
+  </div>
     
     <script>
     let slideIndex = 0;
-    showSlides();
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+
+  function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+  setTimeout(showSlides, 2000);
     
     function showSlides() {
       let i;
@@ -133,12 +142,11 @@ function showPage() {
       }
       slides[slideIndex-1].style.display = "block";  
       dots[slideIndex-1].className += " active";
-      setTimeout(showSlides, 5000); // Change image every 5 seconds
     }
     </script>
 
-<h2>Our Sponsors</h2>
 
+<h2>Our Sponsors</h2>
 <div class="row">
   <div class="column">
     <img src="images/Sponsors/amuc.png" alt="Alpha Med" class="responsive" width="350px" height="320">
@@ -182,6 +190,7 @@ function showPage() {
   <div class="column">
     <img src="images/Sponsors/sma.png" alt="" class="responsive" width="500px" height="320">
   </div>
+
 
 
 
