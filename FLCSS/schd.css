@@ -1,17 +1,19 @@
 /*Page Details*/
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0%;
-    background-color: black;
-  }
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0%;
+  background-color: white;
+  align-items: center;
+  height: 100%;
+}
 
 /* Main Header*/
 .schedule {
-    padding: 50px;
-    text-align: center;
-    background-color: rgb(9,39,96);
-    color: white;
-  }
+  padding: 50px;
+  text-align: center;
+  background-color: rgb(9,39,96);
+  color: white;
+}
 
 * {box-sizing: border-box;}
 
@@ -40,6 +42,67 @@ text-decoration: underline;
 background-color: #4e4e4e;
 color: white;
 }
+*/
+
+
+/* Coundown*/
+
+body {
+align-items: center;
+background-color: #ffffff;
+font-family: 
+  "Segoe UI",
+  "Helvetica Neue", 
+  sans-serif;
+}
+
+.container {
+color: #333;
+margin: 0 auto;
+text-align: center;
+width: 100%;
+}
+
+h2 {
+font-weight: normal;
+letter-spacing: .125em;
+text-transform: uppercase;
+text-align: center;
+}
+
+#headline{
+text-align: center;
+}
+
+li {
+display: inline-block;
+font-size: 1.5em;
+list-style-type: none;
+padding: 1em;
+text-transform: uppercase;
+}
+
+li span {
+display: block;
+font-size: 4.5em;
+}
+
+
+@media all and (max-width: 768px) {
+h1 {
+  font-size: calc(1.5rem * var(--smaller));
+}
+
+li {
+  font-size: calc(1.125rem * var(--smaller));
+}
+
+li span {
+  font-size: calc(3.375rem * var(--smaller));
+}
+}
+
+
 
 /* Footer Menu*/
 #footer{
