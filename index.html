@@ -2,10 +2,10 @@
 <html>
 <head>
     <title>Flying Legion | Team 3635</title>
-    <link rel="icon" type="image/x-icon" href="images/favicon.ico"/>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="stylesheet" href="FLCSS/home.css">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <script src="JS/home.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <!--Loader and Main Headers -->
@@ -13,93 +13,60 @@
 
 <div id="loader"></div>
 <div style="display:none;" id="myDiv" class="animate-bottom">
-
-<!--Nav Bar-->
-<div class="topnav">
-  <a class="active" href="./flyingLegion.html">Home</a>
-  <a href="./about.html">About</a>
-  <a href="./Schedule.html">Schedule</a>
-  <a href="./contact.html">Contact</a>
-</div>
-
-    <h1 id= "myHeader"> Team 3635: Flying Legion</h1>	
-    <body>
-        <div class="About-us">
-            <h2 id = "nash143">Houston County First Robotics Team </h1>
-              <p></p>
-    </body>
-  </body>
-</div>
-
-<!--loader script-->
-<script>
-var myVar;
-
-function myFunction() {
-  myVar = setTimeout(showPage, 3000);
-}
-
-function showPage() {
-  document.getElementById("loader").style.display = "none";
-  document.getElementById("myDiv").style.display = "block";
-}
-
-</script>
-
-
-
-<!--Footer/BB-->
-<div id="footer">Menu<br>
+    <!--Nav Bar-->
+    <div class="topnav">
+        <a class="active" href="./flyingLegion.html">Home</a>
+        <a href="./about.html">About</a>
+        <a href="./Schedule.html">Schedule</a>
+        <a href="./contact.html">Contact</a>
+    </div>    
+  
+    <h1 id="myHeader">Team 3635: Flying Legion</h1>
    
-    <a  style="font-size: 15px; color: white; text-decoration:none;" href="file:///Users/nivens/Downloads/Robotic/flyingLegion.html">Home</a><br>
-
-    <a style="font-size: 15px; color: white; text-decoration:none;" href="./about2.html">About Us</a><br>
-		
-   
-	<a style="font-size: 15px; color: white; text-decoration:none;" href="file:///Users/nivens/Downloads/Robotic/Schedule.html">Schedule</a><br>
-
-
-	<a style="font-size: 15px; color: white; text-decoration:none;" href="file:///Users/nivens/Downloads/Robotic/contact.html">Contact Us</a> <br>
-
-
-</div>
-
-
-
-
-
-
-
-<!--Slideshow-->
-<div class="slideshow-container">
-
-    <div class="mySlides fade">
-      <div class="numbertext">1 / 5</div>
-      <img src="images/devon.jpeg" style="width:100%;height:585px">
-      <div class="text">G.R.I.T.S 2022</div>
+    <div class="About-us">
+        <h2 id="nash143">Houston County First Robotics Team</h2>
+        <p></p>
     </div>
-    
-    <div class="mySlides fade">
-      <div class="numbertext">2 / 5</div>
-      <img src="images/Kickoff.jpeg" style="width:100%;height:585px">
-      <div class="text">Kickoff 2023</div>
-    </div>
-    
-    <div class="mySlides fade">
-      <div class="numbertext">3 / 5</div>
-      <img src="images/3635.jpeg" style="width:100%;height:585px">
-      <div class="text">FRC 2022</div>
-    </div>
+
+    <!---Video-->
+      <div class="video-background">
+        <div class="video-container">
+          <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Jxbw4ovMjqU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay1&mute=1; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen autoplay></iframe>
+        </div>
+      </div>
+
+    <br>
+
+
+    <!--Slideshow-->
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 5</div>
+            <img src="images/devon.jpeg" alt="Grits 2022" style="width:100%;height:585px">
+            <div class="text">G.R.I.T.S 2022</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 5</div>
+            <img src="images/Kickoff.jpeg" alt="Kickoff 2023" style="width:100%;height:585px">
+            <div class="text">Kickoff 2023</div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 5</div>
+            <img src="images/3635.jpeg" alt=" FRC 2022" style="width:100%;height:585px">
+            <div class="text">FRC 2022</div>
+        </div>
     
     <div class="mySlides fade">
         <div class="numbertext">4 / 5</div>
-        <img src="images/team2.jpeg" style="width:100%;height:585px">
+        <img src="images/team2.jpeg" alt="team" style="width:100%;height:585px">
         <div class="text">Locked In 😤</div>
       </div>
     
       <div class="mySlides fade">
         <div class="numbertext">5 / 5</div>
-        <img class=image-responsive src="images/scream.jpeg" style="width:100%;height:585px">
+        <img class=img-responsive src="images/scream.jpeg" alt="scream" style="width:100%;height:585px">
         <div class="text">Screaming</div>
       </div>
     
@@ -113,111 +80,152 @@ function showPage() {
       <span class="dot" onclick="currentSlide(3)"></span> 
       <span class="dot" onclick="currentSlide(4)"></span>  
   </div>
-    
-    <script>
-    let slideIndex = 0;
-  showSlides(slideIndex);
 
-  function plusSlides(n) {
-  showSlides(slideIndex += n);
+  <script>
+   let slideIndex = 0;
+let timer;
+
+function showSlides(slideIndex) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  }  
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].classList.add("active");
+  
+  // clear existing timer
+  clearTimeout(timer);
+  // start new timer
+  timer = setTimeout(function() {
+    showSlides(slideIndex);
+  }, 8000);
 }
 
+showSlides(slideIndex);
 
-  function currentSlide(n) {
+function currentSlide(n) {
   showSlides(slideIndex = n);
 }
-  setTimeout(showSlides, 2000);
-    
-    function showSlides() {
-      let i;
-      let slides = document.getElementsByClassName("mySlides");
-      let dots = document.getElementsByClassName("dot");
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-      }
-      slideIndex++;
-      if (slideIndex > slides.length) {slideIndex = 1}    
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-      }
-      slides[slideIndex-1].style.display = "block";  
-      dots[slideIndex-1].className += " active";
-    }
+
+function startSlideShow() {
+  // clear existing timer
+  clearTimeout(timer);
+  // start new timer
+  timer = setTimeout(function() {
+    slideIndex++;
+    showSlides(slideIndex);
+    startSlideShow(); // Call this function recursively to repeat the slideshow
+  }, 8000);
+}
+
+startSlideShow();
     </script>
+    
 
 
+<!--Sponsors-->
 <h2>Our Sponsors</h2>
 <div class="row">
   <div class="column">
-    <img src="images/Sponsors/amuc.png" alt="Alpha Med" class="responsive" width="350px" height="320">
+    <img src="images/Sponsors/amuc.png" alt="Alpha Med" class="responsive">
   </div>
   <div class="column">
-    <img src="images/Sponsors/BAE.png" alt="BAE Systems" class="responsive" width="500px" height="255">
+    <img src="images/Sponsors/BAE.png" alt="BAE Systems" class="responsive">
     </div>
     <div class="column">
-    <img src="images/Sponsors/BAH.png" alt="Booze Allen Hamilton" class="responsive" width="500px" height="320">
+    <img src="images/Sponsors/BAH.png" alt="Booze Allen Hamilton" class="responsive">
     </div>
+</div>
+<div class="row">
     <div class="column">
-    <img src="images/Sponsors/cma.png" alt="Cornerstone Medical" class="responsive" width="500px" height="320">
+    <img src="images/Sponsors/cma.png" alt="Cornerstone Medical" class="responsive">
   </div>
   <div class="column">
-    <img src="images/Sponsors/dodStem.png" alt="Dep. Of Defense" class="responsive" width="500px" height="320">
+    <img src="images/Sponsors/dodStem.png" alt="Dep. Of Defense" class="responsive">
   </div>
   <div class="column">
-    <img src="images/Sponsors/Flint.png" alt="Flint Energies" class="responsive" width="500px" height="320">
+    <img src="images/Sponsors/Flint.png" alt="Flint Energies" class="responsive">
+  </div>
+ </div>
+ <div class="row">
+  <div class="column">
+    <img src="images/Sponsors/frito.png" alt="Frito Lay" class="responsive">
   </div>
   <div class="column">
-    <img src="images/Sponsors/frito.png" alt="Frito Lay" class="responsive" width="500px" height="320">
+    <img src="images/Sponsors/gp.png" alt="Georgia Power" class="responsive">
   </div>
   <div class="column">
-    <img src="images/Sponsors/gp.png" alt="Georgia Power" class="responsive" width="500px" height="320">
+    <img src="images/Sponsors/HH.png" alt="" class="responsive">
+  </div>
+  </div>
+  <div class="row">
+  <div class="column">
+    <img src="images/Sponsors/hlwh.png" alt="" class="responsive">
   </div>
   <div class="column">
-    <img src="images/Sponsors/HH.png" alt="" class="responsive" width="500px" height="320">
+    <img src="images/Sponsors/jbh.png" alt="" class="responsive">
   </div>
   <div class="column">
-    <img src="images/Sponsors/hlwh.png" alt="" class="responsive" width="500px" height="320">
+    <img src="images/Sponsors/me.png" alt="" class="responsive">
+  </div>
+  </div>
+  <div class="row">
+  <div class="column">
+    <img src="images/Sponsors/MGO.png" alt="" class="responsive">
   </div>
   <div class="column">
-    <img src="images/Sponsors/jbh.png" alt="" class="responsive" width="500px" height="320">
+    <img src="images/Sponsors/sma.png" alt="" class="responsive">
   </div>
-  <div class="column">
-    <img src="images/Sponsors/me.png" alt="" class="responsive" width="500px" height="320">
-  </div>
-  <div class="column">
-    <img src="images/Sponsors/MGO.png" alt="" class="responsive" width="500px" height="320">
-  </div>
-  <div class="column">
-    <img src="images/Sponsors/sma.png" alt="" class="responsive" width="500px" height="320">
+
+
   </div>
 
 
 
 
 <!--Scroll To Top-->
-<button onclick="topFunction()" id="myBtn" title="Go to top">&#8593</button>
-
+<button onclick="topFunction()" id="myBtnu" title="Go to top">&#8593;</button>
 <script>
-// Get the button
-let mybutton = document.getElementById("myBtn");
-
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
+  // Get the button
+  let mybutton = document.getElementById("myBtnu");
+  
+  // When the user scrolls down 20px from the top of the document, show the button
+  window.onscroll = function() {scrollFunction()};
+  
+  function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
   }
-}
+  
+  // When the user clicks on the button, scroll to the top of the document
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+  </script>
 
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
-</script>
 
+
+<!--Footer/BB-->
+<footer class="footer"><u>Menu</u>
+  <br>
+  <a style="font-size: 15px; color: white; text-decoration: none;" href="./index.html">Home</a><br>
+  <a style="font-size: 15px; color: white; text-decoration: none;" href="file:///Users/nivens/Downloads/Robotic/about.html">About Us</a><br>
+  <a style="font-size: 15px; color: white; text-decoration: none;" href="file:///Users/nivens/Downloads/Robotic/Schedule.html">Schedule</a><br>
+  <a style="font-size: 15px; color: white; text-decoration: none;" href="file:///Users/nivens/Downloads/Robotic/contact.html">Contact Us</a> <br>
+</footer>
+</div>
 </body>
 </html>
